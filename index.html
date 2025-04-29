@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PhC Solution Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/black_on_trans_new.png" type="image/x-icon">
+</head>
+<body class="bg-gray-900 font-pixel text-white flex h-screen overflow-hidden">
+
+  <!-- Sidebar -->
+  <aside class="bg-pink-600 min-h-screen w-40 px-4 py-6 flex flex-col items-center space-y-8 relative">
+    <!-- LOGO NỔI BẬT -->
+    <div class="w-24 h-24 mt-4">
+      <img src='logo.png' alt="Logo" class="w-full h-full object-contain drop-shadow-xl animate-spin-slow hover:scale-110 transition duration-300" />
+    </div>
+  
+    <!-- NAVIGATION -->
+    <nav class="flex flex-col space-y-6 text-white text-sm font-bold">
+      <a href="/" class="flex items-center space-x-2 hover:text-yellow-300">
+        🏠 <span>Home</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:text-yellow-300">
+        🛠️ <span>Services</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:text-yellow-300">
+        📬 <span>Contact</span>
+      </a>
+    </nav>
+  
+    <!-- Đốm pixel thêm vào nền nếu muốn -->
+  </aside>
+  
+
+  <!-- Main content -->
+  <main class="flex-1 overflow-y-auto p-8 space-y-16 bg-gray-800">
+    <div id="header"></div>
+    <div id="services"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+/* Import Font Fredoka từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: url('../images/bg-forest.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #cbe7f6; /* fallback nếu hình không tải */
+  color: #2b2b2b;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  background-color: #eaf7fb;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1f1f1f;
+}
+
+/* NAVIGATION */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #d6effc;
+  border-top: 2px solid #91d3f2;
+  border-bottom: 2px solid #91d3f2;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #f0b000;
+}
+
+/* MAIN SECTION */
+.main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SERVICE CARDS */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #91d3f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 4px 4px 0 #91d3f2;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* BUTTON PIXEL STYLE */
+.btn {
+  background-color: #fbd65c;
+  border: 2px solid #f0b000;
+  padding: 10px 20px;
+  color: #1f1f1f;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  box-shadow: 3px 3px 0 #f0b000;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f0b000;
+  color: #ffffff;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #eaf7fb;
+  color: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #91d3f2;
+  margin-top: 40px;
+}
+
+/* GLITCH EFFECT (Retro style) */
+.glitch {
+  color: #1f1f1f;
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f0b000;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  animation: glitch 2s infinite;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  5% {
+    clip: rect(10px, 9999px, 40px, 0);
+  }
+  10% {
+    clip: rect(85px, 9999px, 140px, 0);
+  }
+  15% {
+    clip: rect(30px, 9999px, 60px, 0);
+  }
+  20% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+
+/* Day/Night Theme Toggle */
+body.theme-day {
+  background-color: #e2f3ff;
+  color: #1a1a1a;
+}
+
+body.theme-night {
+  background-color: #1b1b2f;
+  color: #f0f0f0;
+}
+
+/* Pixel Rain Effect */
+.pixel-drop {
+  position: fixed;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  background: #ff00ff;
+  animation: drop 4s linear infinite;
+  z-index: 10;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Firework Explosion */
+.pixel-firework {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: yellow;
+  box-shadow:
+    10px 10px red,
+    -10px -10px blue,
+    10px -10px green,
+    -10px 10px orange;
+  border-radius: 50%;
+  animation: boom 0.5s ease-out;
+  pointer-events: none;
+  z-index: 20;
+}
+
+@keyframes boom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Retro Popup (like Mario message box) */
+.retro-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 12px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  border: 3px solid #ff00ff;
+  box-shadow: 4px 4px 0 #00ffff;
+  z-index: 100;
+  animation: fadeinout 2s ease forwards;
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Dark theme override */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-theme .card {
+  background-color: #2a2a2a;
+  border-color: #fbd65c;
+  color: #fff;
+}
+
+body.dark-theme .btn {
+  background-color: #333;
+  color: #fbd65c;
+  border-color: #fbd65c;
+}
+
+/* Retro shake */
+@keyframes shake {
+  from {
+    transform: translateX(-2px);
+  }
+  to {
+    transform: translateX(2px);
+  }
+}
+
+/* Firework particle */
+@keyframes boom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Glow effect khi hover vào logo */
+.glow-pixel {
+  filter: drop-shadow(0 0 6px #fbd65c) drop-shadow(0 0 12px #ff00ff);
+}
+
+/* Shadow glow cho khung */
+.hover\:shadow-pixel-glow:hover {
+  box-shadow: 0 0 8px #fbd65c, 0 0 16px #ff00ff;
+}

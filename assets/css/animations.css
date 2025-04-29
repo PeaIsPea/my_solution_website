@@ -1,0 +1,25 @@
+/* Simple pixel-bounce animation */
+@keyframes pixelBounce {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(2px, -2px);
+    }
+    50% {
+      transform: translate(-2px, 2px);
+    }
+    75% {
+      transform: translate(2px, 2px);
+    }
+  }
+  
+  .bounce-pixel {
+    animation: pixelBounce 1s infinite;
+  }
+  
+  /* Smooth scroll cho toàn bộ trang */
+  html {
+    scroll-behavior: smooth;
+  }
+  
