@@ -48,5 +48,5 @@ Just open `index.html` in your browser. No build tools required!
 
 ## 📬 Contact
 
-Built with 💖 by [My Solution Co.]  
+Built with 💖 by [Pea(Nguyen Ngoc Phuc)]  
 For collaborations or inquiries, drop us a pixel-message!
